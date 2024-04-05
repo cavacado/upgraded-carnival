@@ -1,11 +1,10 @@
-import Link from "next/link";
 export default function Outbound() {
   return (
     <>
       <h1>Showcasing Outbound Links:</h1>
-      <Link href={"https://www.channelnewsasia.com/"} passHref>
+      <a href={"https://www.channelnewsasia.com/"} target="_blank">
         Link to outbound
-      </Link>
+      </a>
     </>
   );
 }
