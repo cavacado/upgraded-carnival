@@ -9,7 +9,7 @@ export async function login(formData: FormData) {
     email: formData.get("email"),
     password: formData.get("password"),
   };
-  console.log(rawFormData)
+  console.log(rawFormData);
   cookies().set("authorised", randomInt().toString());
   redirect("/");
 }

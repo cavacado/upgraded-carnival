@@ -1,4 +1,5 @@
 "use client";
+import { sendGAEvent } from "@next/third-parties/google";
 import { login } from "../actions/login";
 
 export default function Login() {
@@ -16,7 +17,13 @@ export default function Login() {
           <input type="password" name="password" id="password" required />
         </div>
         <div>
-          <input type="submit" value="Login" />
+          <input
+            type="submit"
+            value="Login"
+            onClick={() => {
+              sendGAEvent("event", "login", { method: "cookie" });
+            }}
+          />
         </div>
       </form>
     </>

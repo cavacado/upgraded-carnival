@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={inter.className}
+        style={{
+          minHeight: "95dvh",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        {children}
+        <footer
+          style={{
+            marginTop: "auto",
+          }}
+        >
+          <Link href="/">Back to Home</Link>
+        </footer>
+      </body>
       <GoogleAnalytics gaId="G-MXGLJQ7P7W" />
     </html>
   );
