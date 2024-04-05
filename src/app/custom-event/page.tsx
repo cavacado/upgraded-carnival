@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { sendGAEvent } from "@next/third-parties/google";
 export default function CustomEvent() {
   return (

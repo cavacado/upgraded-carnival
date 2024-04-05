@@ -14,6 +14,8 @@ export default function Home() {
         <Link href="/embed">Embed</Link>
         <br />
         <Link href="/outbound">Outbound</Link>
+        <br />
+        <Link href="/outbound">Custom Event</Link>
       </nav>
     </div>
   );
