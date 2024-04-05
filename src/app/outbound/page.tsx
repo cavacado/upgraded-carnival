@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Outbound() {
   return (
     <>
@@ -5,6 +7,11 @@ export default function Outbound() {
       <a href={"https://www.channelnewsasia.com/"} target="_blank">
         Link to outbound
       </a>
+      <br />
+      {/* See whether Nextjs Link can track outbound links */}
+      <Link href={"https://www.channelnewsasia.com/"} passHref>
+        Link to outbound (Next Link)
+      </Link>
     </>
   );
 }
