@@ -14,6 +14,8 @@ export default function CustomEvent() {
       >
         send custom event
       </button>
+      <br />
+      {window.dataLayer && <pre>{JSON.stringify(window.dataLayer)}</pre>}
     </>
   );
 }
