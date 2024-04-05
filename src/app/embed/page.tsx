@@ -1,13 +1,14 @@
+import { YouTubeEmbed } from "@next/third-parties/google";
+
+// note that need to enable iframe jsapi if we wanna track
+// video views
 export default function Embed() {
   return (
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/EngW7tLk6R8?si=uptCN5Uetaswcd75"
-      title="YouTube video player"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerPolicy="strict-origin-when-cross-origin"
-      allowFullScreen
-    ></iframe>
+    <YouTubeEmbed
+      videoid="EngW7tLk6R8"
+      height={400}
+      params="controls=0"
+      js-api
+    />
   );
 }
