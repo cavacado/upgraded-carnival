@@ -34,3 +34,7 @@ Google analytics testing:
   - file_download
   - form_start
   - form_submit
+- testing for recommended events: (predefined dimensions)
+  - login
+- testing for custom events: (no predefined dimensions)
+  - custom event
