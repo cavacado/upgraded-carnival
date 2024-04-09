@@ -34,7 +34,9 @@ export default function RootLayout({
           <Link href="/">Back to Home</Link>
         </footer>
       </body>
-      <GoogleAnalytics gaId="G-MXGLJQ7P7W" />
+      {process.env.GA_MEASUREMENT_ID && (
+        <GoogleAnalytics gaId={process.env.GA_MEASUREMENT_ID} />
+      )}
     </html>
   );
 }
